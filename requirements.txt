@@ -1,0 +1,16 @@
+numpy
+pandas
+matplotlib
+seaborn
+notebook
+scikit-learn
+tensorflow
+keras
+python-box==6.0.2
+tqdm
+ensure
+joblib
+types-PyYaML
+scipy
+Flask
+Flask-Cors

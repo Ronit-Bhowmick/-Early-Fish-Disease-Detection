@@ -12,3 +12,4 @@ src/early_fish_disease_detection/constants/__init__.py
 src/early_fish_disease_detection/entity/__init__.py
 src/early_fish_disease_detection/pipeline/__init__.py
 src/early_fish_disease_detection/utils/__init__.py
+src/early_fish_disease_detection/utils/common.py

@@ -43,7 +43,6 @@ file_list = [
 
     # React Native-related files and directories
     "frontend/package.json",
-    "frontend/.gitignore",
     "frontend/app.json",
     "frontend/index.js",
     "frontend/App.js",

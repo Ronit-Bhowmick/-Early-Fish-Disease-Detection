@@ -1,0 +1,61 @@
+stages:
+  data_ingestion:
+    cmd: python src/early_fish_disease_detection/pipeline/stage01_data_ingestion.py
+    deps: 
+      - src/early_fish_disease_detection/pipeline/stage01_data_ingestion.py
+      - config/config.yaml
+    outs:
+      - artifacts/data_ingestion/unzipped/Freshwater Fish Disease Aquaculture in south asia
+
+
+  prepare_base_model:
+    cmd: python src/early_fish_disease_detection/pipeline/stage02_prepare_base_model.py
+    deps: 
+        - src/early_fish_disease_detection/pipeline/stage02_prepare_base_model.py
+        - config/config.yaml
+
+    params:
+        - IMAGE_SIZE
+        - INCLUDE_TOP
+        - NUM_CLASSES
+        - WEIGHTS
+        - LEARNING_RATE
+
+    outs:
+        - artifacts/prepare_base_model
+
+
+  training:
+    cmd: python src/early_fish_disease_detection/pipeline/stage03_training.py
+    deps: 
+      - src/early_fish_disease_detection/pipeline/stage03_training.py
+      - src/early_fish_disease_detection/components/prepare_callbacks.py
+      - config/config.yaml
+      - artifacts/data_ingestion/unzipped/Freshwater Fish Disease Aquaculture in south asia
+      - artifacts/prepare_base_model
+
+    params:
+      - IMAGE_SIZE
+      - EPOCHS
+      - BATCH_SIZE
+      - AUGMENTATION
+
+    outs:
+      - artifacts/training/model.keras
+
+
+  evaluation:
+    cmd: python src/early_fish_disease_detection/pipeline/stage04_model_evaluation.py
+    deps:
+      - src/early_fish_disease_detection/pipeline/stage04_model_evaluation.py
+      - config/config.yaml
+      - artifacts/data_ingestion/unzipped/Freshwater Fish Disease Aquaculture in south asia
+      - artifacts/training/model.keras
+
+    params:
+      - IMAGE_SIZE
+      - BATCH_SIZE
+
+    metrics:
+      - scores.json:
+          cache: false

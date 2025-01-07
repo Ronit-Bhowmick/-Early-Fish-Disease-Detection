@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 from early_fish_disease_detection.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from early_fish_disease_detection.utils.common import read_yaml, create_dir
-from early_fish_disease_detection.entity.configuration_entity import DataIngestionConfig, BaseModelConfig, PrepareCallbackConfig, TrainingConfig
+from early_fish_disease_detection.entity.configuration_entity import DataIngestionConfig, BaseModelConfig, PrepareCallbackConfig, TrainingConfig, EvaluationConfig
 
 
 class ConfigurationManager:
@@ -78,3 +78,15 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+    
+    def get_validation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            model_path=Path('artifacts/training/model.keras'),
+            training_data=Path('artifacts/data_ingestion/unzipped/Freshwater Fish Disease Aquaculture in south asia'),
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE
+        )
+
+        return eval_config

@@ -1,0 +1,120 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/early_fish_disease_detection/pipeline/stage01_data_ingestion.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: bbc4110c47d0856072252772c2ec2612
+      size: 841
+    - path: src/early_fish_disease_detection/pipeline/stage01_data_ingestion.py
+      hash: md5
+      md5: d22d2af5f19ca9f4c0f90373d9f747bd
+      size: 875
+    outs:
+    - path: artifacts/data_ingestion/unzipped/Freshwater Fish Disease Aquaculture
+        in south asia
+      hash: md5
+      md5: ec406e880a4cb77aac92f560aeeba1b9.dir
+      size: 25992793
+      nfiles: 2451
+  prepare_base_model:
+    cmd: python src/early_fish_disease_detection/pipeline/stage02_prepare_base_model.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: bbc4110c47d0856072252772c2ec2612
+      size: 841
+    - path: src/early_fish_disease_detection/pipeline/stage02_prepare_base_model.py
+      hash: md5
+      md5: 84cb429bede629487f3d36d823b6c7b7
+      size: 948
+    params:
+      params.yaml:
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+        INCLUDE_TOP: false
+        LEARNING_RATE: 0.001
+        NUM_CLASSES: 7
+        WEIGHTS: imagenet
+    outs:
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 831b84515943cfe2c50bf91c7d381dca.dir
+      size: 20969086
+      nfiles: 2
+  training:
+    cmd: python src/early_fish_disease_detection/pipeline/stage03_training.py
+    deps:
+    - path: artifacts/data_ingestion/unzipped/Freshwater Fish Disease Aquaculture
+        in south asia
+      hash: md5
+      md5: ec406e880a4cb77aac92f560aeeba1b9.dir
+      size: 25992793
+      nfiles: 2451
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 831b84515943cfe2c50bf91c7d381dca.dir
+      size: 20969086
+      nfiles: 2
+    - path: config/config.yaml
+      hash: md5
+      md5: bbc4110c47d0856072252772c2ec2612
+      size: 841
+    - path: src/early_fish_disease_detection/components/prepare_callbacks.py
+      hash: md5
+      md5: 2f626cd73e65c2a0261fa1feee5225bf
+      size: 1013
+    - path: src/early_fish_disease_detection/pipeline/stage03_training.py
+      hash: md5
+      md5: 370337434ded4537c57b3be0d698f671
+      size: 1236
+    params:
+      params.yaml:
+        AUGMENTATION: true
+        BATCH_SIZE: 16
+        EPOCHS: 1
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+    outs:
+    - path: artifacts/training/model.keras
+      hash: md5
+      md5: c2a833a08ad4de3b4be9f3280c06de34
+      size: 14875579
+  evaluation:
+    cmd: python src/early_fish_disease_detection/pipeline/stage04_model_evaluation.py
+    deps:
+    - path: artifacts/data_ingestion/unzipped/Freshwater Fish Disease Aquaculture
+        in south asia
+      hash: md5
+      md5: ec406e880a4cb77aac92f560aeeba1b9.dir
+      size: 25992793
+      nfiles: 2451
+    - path: artifacts/training/model.keras
+      hash: md5
+      md5: c2a833a08ad4de3b4be9f3280c06de34
+      size: 14875579
+    - path: config/config.yaml
+      hash: md5
+      md5: bbc4110c47d0856072252772c2ec2612
+      size: 841
+    - path: src/early_fish_disease_detection/pipeline/stage04_model_evaluation.py
+      hash: md5
+      md5: c7a0cecd788681f98b9b784d14f1352e
+      size: 836
+    params:
+      params.yaml:
+        BATCH_SIZE: 16
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+    outs:
+    - path: scores.json
+      hash: md5
+      md5: 593643a5202e819c613897bc44ea1e29
+      size: 72

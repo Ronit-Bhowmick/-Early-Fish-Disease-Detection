@@ -2,7 +2,7 @@ from early_fish_disease_detection.config.config import ConfigurationManager
 from early_fish_disease_detection.components.data_ingestion import DataIngestion
 from early_fish_disease_detection import logger
 
-STATGE_NAME = "Data Ingestion"
+STAGE_NAME = "Data Ingestion"
 
 class DataIngestionTrainingPipeline:
     def __init__(self):
@@ -19,10 +19,10 @@ class DataIngestionTrainingPipeline:
 
 if __name__ ==  '__main__':
     try:
-        logger.info(f"Starting {STATGE_NAME}...")
+        logger.info(f"Starting {STAGE_NAME}...")
         obj = DataIngestionTrainingPipeline()
         obj.main()
-        logger.info(f"{STATGE_NAME} completed.")
+        logger.info(f"{STAGE_NAME} completed.")
     except Exception as e:
         logger.exception(e)
         raise e

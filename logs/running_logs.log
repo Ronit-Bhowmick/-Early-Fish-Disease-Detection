@@ -27,3 +27,28 @@
 2025-01-06 21:42:39,489 - Early-Fish-Disease-Detection-logger - INFO - Downloading data from https://drive.google.com/file/d/1SQZ5_wmTlgj5i04qtyMo5BnXbcfq84D-/view?usp=sharing into file artifacts/data_ingestion/data.zip
 2025-01-06 21:43:00,265 - Early-Fish-Disease-Detection-logger - INFO - Downloaded data from https://drive.google.com/file/d/1SQZ5_wmTlgj5i04qtyMo5BnXbcfq84D-/view?usp=sharing into file artifacts/data_ingestion/data.zip
 2025-01-06 21:43:04,243 - Early-Fish-Disease-Detection-logger - INFO - Data Ingestion completed.
+2025-01-07 11:03:26,876 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-07 11:03:26,889 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-07 11:03:26,892 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-07 11:03:26,894 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts/prepare_base_model created successfully
+2025-01-07 11:03:32,123 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-07 11:03:33,828 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-07 11:08:26,053 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-07 11:08:26,059 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-07 11:08:26,062 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-07 11:08:26,066 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts/prepare_base_model created successfully
+2025-01-07 11:33:30,266 - Early-Fish-Disease-Detection-logger - INFO - Starting Data Ingestion...
+2025-01-07 11:33:30,361 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-07 11:33:30,361 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-07 11:33:30,361 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-07 11:33:30,361 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts/data_ingestion created successfully
+2025-01-07 11:33:30,361 - Early-Fish-Disease-Detection-logger - INFO - Downloading data from https://drive.google.com/file/d/1SQZ5_wmTlgj5i04qtyMo5BnXbcfq84D-/view?usp=sharing into file artifacts/data_ingestion/data.zip
+2025-01-07 11:33:54,067 - Early-Fish-Disease-Detection-logger - INFO - Downloaded data from https://drive.google.com/file/d/1SQZ5_wmTlgj5i04qtyMo5BnXbcfq84D-/view?usp=sharing into file artifacts/data_ingestion/data.zip
+2025-01-07 11:33:57,728 - Early-Fish-Disease-Detection-logger - INFO - Data Ingestion completed.
+2025-01-07 11:33:57,744 - Early-Fish-Disease-Detection-logger - INFO - *************************
+2025-01-07 11:33:57,759 - Early-Fish-Disease-Detection-logger - INFO - Starting Prepare Base Model...
+2025-01-07 11:33:57,775 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-07 11:33:57,775 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-07 11:33:57,791 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-07 11:33:57,791 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts/prepare_base_model created successfully
+2025-01-07 11:34:02,490 - Early-Fish-Disease-Detection-logger - INFO - Prepare Base Model completed.

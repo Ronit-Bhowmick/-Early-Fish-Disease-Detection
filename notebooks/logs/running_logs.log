@@ -1,0 +1,6 @@
+2025-01-06 21:16:39,205 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-06 21:16:39,213 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-06 21:16:39,213 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-06 21:16:39,222 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts/data_ingestion created successfully
+2025-01-06 21:16:39,222 - Early-Fish-Disease-Detection-logger - INFO - Downloading data from https://drive.google.com/file/d/1SQZ5_wmTlgj5i04qtyMo5BnXbcfq84D-/view?usp=sharing into file artifacts/data_ingestion/data.zip
+2025-01-06 21:17:03,354 - Early-Fish-Disease-Detection-logger - INFO - Downloaded data from https://drive.google.com/file/d/1SQZ5_wmTlgj5i04qtyMo5BnXbcfq84D-/view?usp=sharing into file artifacts/data_ingestion/data.zip

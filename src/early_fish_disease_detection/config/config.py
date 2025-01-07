@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 from early_fish_disease_detection.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from early_fish_disease_detection.utils.common import read_yaml, create_dir
-from early_fish_disease_detection.entity.configuration_entity import DataIngestionConfig, BaseModelConfig, PrepareCallbackConfig
+from early_fish_disease_detection.entity.configuration_entity import DataIngestionConfig, BaseModelConfig, PrepareCallbackConfig, TrainingConfig
 
 
 class ConfigurationManager:
@@ -57,3 +57,24 @@ class ConfigurationManager:
         )
 
         return prepare_callback_config
+    
+
+    def get_training_config(self) -> TrainingConfig:
+        training = self.config.training
+        prepare_base_model = self.config.prepare_base_model
+        params = self.params
+        training_data = os.path.join(self.config.data_ingestion.unzip_dir, "Freshwater Fish Disease Aquaculture in south asia")
+        create_dir([Path(training.root_dir)])
+
+        training_config = TrainingConfig(
+            root_dir=Path(training.root_dir),
+            trained_model_path=Path(training.trained_model_path),
+            updated_base_model_path=Path(prepare_base_model.updated_base_model_path),
+            training_data=Path(training_data),
+            params_epochs=params.EPOCHS,
+            params_batch_size=params.BATCH_SIZE,
+            params_is_augmentation=params.AUGMENTATION,
+            params_image_size=params.IMAGE_SIZE
+        )
+
+        return training_config

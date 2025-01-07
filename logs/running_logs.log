@@ -52,3 +52,59 @@
 2025-01-07 11:33:57,791 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
 2025-01-07 11:33:57,791 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts/prepare_base_model created successfully
 2025-01-07 11:34:02,490 - Early-Fish-Disease-Detection-logger - INFO - Prepare Base Model completed.
+2025-01-07 12:26:49,486 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-07 12:26:49,515 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-07 12:26:49,519 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-07 12:31:19,670 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-07 12:31:19,677 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-07 12:31:19,677 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-07 12:31:20,008 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\prepare_callbacks\checkpoint_dir created successfully
+2025-01-07 12:31:20,015 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\prepare_callbacks\tensorflow_log_dir created successfully
+2025-01-07 14:05:12,614 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-07 14:05:12,762 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-07 14:05:12,810 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-07 14:05:12,826 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\prepare_callbacks\checkpoint_dir created successfully
+2025-01-07 14:05:12,850 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\prepare_callbacks\tensorflow_log_dir created successfully
+2025-01-07 14:05:13,013 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\training created successfully
+2025-01-07 14:13:11,199 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-07 14:13:11,208 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-07 14:13:11,215 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-07 14:13:11,215 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\prepare_callbacks\checkpoint_dir created successfully
+2025-01-07 14:13:11,226 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\prepare_callbacks\tensorflow_log_dir created successfully
+2025-01-07 14:13:11,232 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\training created successfully
+2025-01-07 14:16:37,264 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-07 14:16:37,271 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-07 14:16:37,271 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-07 14:16:37,279 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\prepare_callbacks\checkpoint_dir created successfully
+2025-01-07 14:16:37,279 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\prepare_callbacks\tensorflow_log_dir created successfully
+2025-01-07 14:16:37,288 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\training created successfully
+2025-01-07 15:12:28,168 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-07 15:12:28,179 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-07 15:12:28,182 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-07 15:12:28,182 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\prepare_callbacks\checkpoint_dir created successfully
+2025-01-07 15:12:28,182 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\prepare_callbacks\tensorflow_log_dir created successfully
+2025-01-07 15:12:28,191 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\training created successfully
+2025-01-07 16:01:43,769 - Early-Fish-Disease-Detection-logger - INFO - Starting Data Ingestion...
+2025-01-07 16:01:43,839 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-07 16:01:43,864 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-07 16:01:43,864 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-07 16:01:43,867 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts/data_ingestion created successfully
+2025-01-07 16:01:43,867 - Early-Fish-Disease-Detection-logger - INFO - Downloading data from https://drive.google.com/file/d/1SQZ5_wmTlgj5i04qtyMo5BnXbcfq84D-/view?usp=sharing into file artifacts/data_ingestion/data.zip
+2025-01-07 16:02:08,945 - Early-Fish-Disease-Detection-logger - INFO - Downloaded data from https://drive.google.com/file/d/1SQZ5_wmTlgj5i04qtyMo5BnXbcfq84D-/view?usp=sharing into file artifacts/data_ingestion/data.zip
+2025-01-07 16:02:12,540 - Early-Fish-Disease-Detection-logger - INFO - Data Ingestion completed.
+2025-01-07 16:02:12,541 - Early-Fish-Disease-Detection-logger - INFO - *************************
+2025-01-07 16:02:12,541 - Early-Fish-Disease-Detection-logger - INFO - Starting Prepare Base Model...
+2025-01-07 16:02:12,546 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-07 16:02:12,550 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-07 16:02:12,551 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-07 16:02:12,552 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts/prepare_base_model created successfully
+2025-01-07 16:02:17,997 - Early-Fish-Disease-Detection-logger - INFO - Prepare Base Model completed.
+2025-01-07 16:02:18,003 - Early-Fish-Disease-Detection-logger - INFO - *************************
+2025-01-07 16:02:18,005 - Early-Fish-Disease-Detection-logger - INFO - Starting Training...
+2025-01-07 16:02:18,028 - Early-Fish-Disease-Detection-logger - INFO - yaml file config\config.yaml read successfully
+2025-01-07 16:02:18,034 - Early-Fish-Disease-Detection-logger - INFO - yaml file params.yaml read successfully
+2025-01-07 16:02:18,036 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
+2025-01-07 16:02:18,038 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\prepare_callbacks\checkpoint_dir created successfully
+2025-01-07 16:02:18,045 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\prepare_callbacks\tensorboard_log_dir created successfully
+2025-01-07 16:02:18,052 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts\training created successfully
+2025-01-07 16:04:59,575 - Early-Fish-Disease-Detection-logger - INFO - Training completed.

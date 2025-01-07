@@ -1,7 +1,9 @@
+import os
+from pathlib import Path
 from early_fish_disease_detection.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from early_fish_disease_detection.utils.common import read_yaml, create_dir
-from early_fish_disease_detection.entity.configuration_entity import DataIngestionConfig, BaseModelConfig
-from pathlib import Path
+from early_fish_disease_detection.entity.configuration_entity import DataIngestionConfig, BaseModelConfig, PrepareCallbackConfig
+
 
 class ConfigurationManager:
     def __init__(self, config_filepath=CONFIG_FILE_PATH, params_filepath=PARAMS_FILE_PATH):
@@ -38,3 +40,20 @@ class ConfigurationManager:
         )
 
         return prepare_base_model_config
+    
+
+    def get_prepare_callback_config(self) -> PrepareCallbackConfig:
+        config = self.config.prepare_callbacks
+        model_ckpt_dir = os.path.dirname(config.checkpoint_model_filepath)
+        create_dir([
+            Path(model_ckpt_dir),
+            Path(config.tensorboard_root_log_dir)
+        ])
+
+        prepare_callback_config = PrepareCallbackConfig(
+            root_dir=Path(config.root_dir),
+            tensorboard_root_log_dir=Path(config.tensorboard_root_log_dir),
+            checkpoint_model_filepath=Path(config.checkpoint_model_filepath)
+        )
+
+        return prepare_callback_config

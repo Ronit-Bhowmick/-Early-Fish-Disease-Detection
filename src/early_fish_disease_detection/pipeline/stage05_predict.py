@@ -11,7 +11,7 @@ class PredictionPipeline:
 
     def predict(self):
         
-        model = load_model(os.path.join("artifacts", "training", "model.keras"))
+        model = load_model(os.path.join("artifacts", "training", "model.tflite"))
 
         img_name = self.filename
         test_image = image.load_img(img_name, target_size=(224,224))

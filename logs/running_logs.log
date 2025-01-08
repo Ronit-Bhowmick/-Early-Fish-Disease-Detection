@@ -309,3 +309,31 @@
 2025-01-08 12:33:21,640 - Early-Fish-Disease-Detection-logger - INFO - Directory artifacts created successfully
 2025-01-08 12:33:58,677 - Early-Fish-Disease-Detection-logger - INFO - json file scores.json saved successfully
 2025-01-08 12:33:58,677 - Early-Fish-Disease-Detection-logger - INFO - Evaluation Stage completed.
+2025-01-08 19:43:32,893 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.5:8000
+2025-01-08 19:43:32,894 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-08 19:43:32,941 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-08 19:43:44,954 - werkzeug - WARNING -  * Debugger is active!
+2025-01-08 19:43:44,962 - werkzeug - INFO -  * Debugger PIN: 816-116-992
+2025-01-08 19:44:11,191 - werkzeug - INFO - 192.168.1.5 - - [08/Jan/2025 19:44:11] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-08 19:44:11,658 - werkzeug - INFO - 192.168.1.5 - - [08/Jan/2025 19:44:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-08 19:44:31,907 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 19:44:31] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-08 19:44:31,982 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 19:44:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-08 19:45:06,280 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-08 19:45:06,280 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-08 19:45:06,311 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-08 19:45:16,062 - werkzeug - WARNING -  * Debugger is active!
+2025-01-08 19:45:16,069 - werkzeug - INFO -  * Debugger PIN: 816-116-992
+2025-01-08 19:45:20,096 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 19:45:20] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-08 19:45:20,252 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 19:45:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-08 19:45:48,354 - werkzeug - INFO -  * Detected change in 'C:\\Users\\ronit\\anaconda3\\envs\\venv\\Lib\\site-packages\\dvc\\daemon.py', reloading
+2025-01-08 19:45:48,354 - werkzeug - INFO -  * Detected change in 'C:\\Users\\ronit\\anaconda3\\envs\\venv\\Lib\\site-packages\\dvc\\analytics.py', reloading
+2025-01-08 19:45:48,354 - werkzeug - INFO -  * Detected change in 'C:\\Users\\ronit\\anaconda3\\envs\\venv\\Lib\\site-packages\\dvc\\cli\\__init__.py', reloading
+2025-01-08 19:45:49,653 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-08 19:46:03,132 - werkzeug - WARNING -  * Debugger is active!
+2025-01-08 19:46:03,138 - werkzeug - INFO -  * Debugger PIN: 816-116-992
+2025-01-08 19:46:05,740 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 19:46:05] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+2025-01-08 19:46:07,674 - werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 19:46:07] "GET /train HTTP/1.1" 200 -

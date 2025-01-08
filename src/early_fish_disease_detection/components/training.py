@@ -63,6 +63,20 @@ class Training:
     def save_model(path: Path, model: tf.keras.Model):
         model.save(path)
 
+
+    def convert_to_tflite(self):
+        converter = tf.lite.TFLiteConverter.from_keras_model(self.model)
+
+        converter.optimizations = [tf.lite.Optimize.DEFAULT]
+        
+        tflite_model = converter.convert()
+
+        tflite_model_path = self.config.trained_model_path.with_suffix(".tflite")
+        with open(tflite_model_path, 'wb') as f:
+            f.write(tflite_model)
+        print(f"Model successfully converted to TFLite and saved at {tflite_model_path}")
+
+
     
     def train(self, callback_list: list):
         self.steps_per_epoch = self.train_generator.samples // self.train_generator.batch_size
@@ -82,3 +96,6 @@ class Training:
             path=self.config.trained_model_path,
             model=self.model
         )
+
+        # Convert the model to TFLite after training
+        self.convert_to_tflite()

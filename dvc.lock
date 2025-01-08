@@ -83,8 +83,12 @@ stages:
     outs:
     - path: artifacts/training/model.keras
       hash: md5
-      md5: c2a833a08ad4de3b4be9f3280c06de34
+      md5: 64714c4a323398c7bc86eedf94021f33
       size: 14875579
+    - path: artifacts/training/model.tflite
+      hash: md5
+      md5: f41ff39eeff874df0c106a9d8b356fb0
+      size: 2939640
   evaluation:
     cmd: python src/early_fish_disease_detection/pipeline/stage04_model_evaluation.py
     deps:
@@ -96,7 +100,7 @@ stages:
       nfiles: 2451
     - path: artifacts/training/model.keras
       hash: md5
-      md5: c2a833a08ad4de3b4be9f3280c06de34
+      md5: 64714c4a323398c7bc86eedf94021f33
       size: 14875579
     - path: config/config.yaml
       hash: md5
@@ -116,5 +120,5 @@ stages:
     outs:
     - path: scores.json
       hash: md5
-      md5: 593643a5202e819c613897bc44ea1e29
-      size: 72
+      md5: 6629e374265e3ff434dc1b27f9f616be
+      size: 73
